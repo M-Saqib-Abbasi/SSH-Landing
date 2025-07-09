@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Solution House</title>
+    <link rel="icon" href="./SSH ICO.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /*Carosol Start*/
+         @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Class to enable sliding animation */
+  .slide {
+    animation: scroll-left 20s linear infinite;
+  }
+
+  /* Pause animation on hover */
+  .logo-carousel:hover .slide {
+    animation-play-state: paused;
+  }
+  .center-align {
+  justify-content: center !important;
+}
+.logo-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+        /*Carosol End */
+        :root {
+            --primary: #0a3d62;
+            --accent: #38ada9;
+            --secondary: #f6b93b;
+            --bg: #f4f7fa;
+            --white: #fff;
+            --shadow: 0 2px 12px rgba(10,61,98,0.08);
+        }
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--primary);
+        }
+        /* Header */
+        /* nav {
+            background: var(--primary);
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7vw;
+            box-shadow: var(--shadow);
+        } */
+        nav {
+    background: linear-gradient(90deg, #9d9fb3 0%, #007ea7 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7vw;
+    box-shadow: 0 2px 12px rgba(10,61,98,0.08);
+}
+
+        nav .logo {
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            font-size: 1.1em;
+        }
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+        /* Hero */
+        .hero {
+            background: linear-gradient(120deg, #0a3d62 60%, #38ada9 100%);
+            color: var(--white);
+            padding: 80px 0 60px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.35em;
+            margin-bottom: 32px;
+            color: #e4eaf1;
+        }
+        .hero .cta-btn {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 16px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: background 0.2s;
+        }
+        .hero .cta-btn:hover {
+            background: #f9ca24;
+        }
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin: 60px 0 24px 0;
+            color: var(--primary);
+        }
+        /* Products */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+        .product {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            padding: 24px 18px;
+            flex: 1 1 270px;
+            max-width: 320px;
+            min-width: 260px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+        .product:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(10,61,98,0.15);
+        }
+        .product img {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            object-fit: cover;
+            box-shadow: 0 2px 10px rgba(56,173,169,0.11);
+        }
+        .product h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            align-items: flex-start;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: 16px;
+            padding: 40px 16px;
+            margin: 40px 0;
+        }
+        .contact-form {
+            flex: 1 1 320px;
+            max-width: 420px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 18px;
+            border-radius: 6px;
+            border: 1px solid #cfd8dc;
+            font-size: 1em;
+            background: #f8fafc;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            height: 90px;
+        }
+        .contact-form button {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 12px 32px;
+            border-radius: 24px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #079992;
+        }
+        .address-info {
+            flex: 1 1 320px;
+            max-width: 420px;
+            font-size: 1.1em;
+            color: var(--primary);
+        }
+        .address-info h4 {
+            margin-top: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .map-container {
+            width: 100%;
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 16px;
+            box-shadow: 0 2px 8px rgba(56,173,169,0.09);
+        }
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 28px 0 16px 0;
+            font-size: 1.1em;
+            margin-top: 40px;
+        }
+        /* WhatsApp Floating Button */
+        .whatsapp_float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 36px;
+            right: 36px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 36px;
+            box-shadow: 2px 2px 8px #999;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        .whatsapp_float:hover {
+            background-color: #128c7e;
+        }
+        @media (max-width: 900px) {
+            .contact-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                padding: 14px 3vw;
+            }
+            .hero h1 { font-size: 2em; }
+            .section-title { font-size: 1.4em; }
+            .contact-section { padding: 20px 4vw; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo" style="display:flex;align-items:center;gap:12px;">
+            <img src="./SSH Logo.png" alt="Company Logo" style="width:44px;height:44px;object-fit:contain;">
+            Software Solution House
+        </div>
+        <ul>
+            <li><a href="#products">CoreSuit</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Empowering Businesses Since 2005</h1>
+        <p>
+            Welcome to <b>Software Solution House</b>, your trusted partner in digital transformation.<br>
+            We craft robust, scalable, and innovative solutions for modern enterprises.<br>
+            <i>Discover our flagship suite: <span style="color:var(--secondary);font-weight:700;">CoreSuit</span></i>
+        </p>
+        <a href="#contact"><button class="cta-btn">Get in Touch</button></a>
+    </section>
+
+    <!-- Products Section -->
+    <div id="products">
+        <div class="section-title">Our CoreSuit Modules</div>
+        <div class="products">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=200&q=80" alt="General Ledger">
+                <h3>General Ledger</h3>
+                <p>Robust financial management with real-time insights and comprehensive reporting.</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=200&q=80" alt="Travel Management">
+                <h3>Travel Management</h3>
+                <p>Seamlessly plan, book, and track business travel and expenses.</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=200&q=80" alt="Ticket Management">
+                <h3>Ticket Management</h3>
+                <p>Efficiently manage support tickets and elevate your customer service.</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?auto=format&fit=crop&w=200&q=80" alt="Inventory Management">
+                <h3>Inventory Management</h3>
+                <p>Automate inventory tracking and optimize your supply chain.</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=200&q=80" alt="POS">
+                <h3>POS</h3>
+                <p>Fast, secure, and reliable Point of Sale for modern retail.</p>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&q=80" alt="On Demand Modules">
+                <h3>On Demand Modules</h3>
+                <p>Custom modules tailored to your unique business needs.</p>
+            </div>
+        </div>
+    </div>
+    <section id="customers" style="max-width: 900px; margin: 60px auto; padding: 0 20px; text-align: center;">
+        <h2 style="font-size: 2.2em; color: #0a3d62; margin-bottom: 24px; font-weight: 700;">Our Valued Customers</h2>
+        <p style="font-size: 1.1em; color: #555; margin-bottom: 30px;">
+          These companies trust Software Solution House and use our CoreSuit suite to power their business operations.
+        </p>
+      
+        <div class="logo-carousel" style="overflow: hidden; position: relative; width: 100%; max-width: 800px; margin: 0 auto;">
+      
+          <div class="logo-track" style="
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            will-change: transform;
+          ">
+            <!-- Logos -->
+            <div class="logo-item" style="flex: 0 0 auto; width: 120px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+            <div class="logo-item" style="flex: 0 0 auto; width: 120px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+            <div class="logo-item" style="flex: 0 0 auto; width: 120px;">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+            
+
+            <!-- Add more logos as needed -->
+          </div>
+        </div>
+      </section>
+      
+    <!-- Contact Section -->
+    <div id="contact" class="section-title">Contact Us</div>
+    <section class="contact-section">
+        <!-- Contact Form -->
+        <form class="contact-form" autocomplete="off" onsubmit="return submitForm(event)">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="user_name" required>
+            <label for="email">Your Email *</label>
+            <input type="email" id="email" name="user_email" required>
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+            <div id="form-status" style="margin-top:10px;font-weight:600;"></div>
+        </form>
+        <!-- Address and Map -->
+        <!-- <div class="address-info">
+            <h4>Our Office</h4>
+            <p>
+                Suit: G-722/724, 2nd Floor, Abbasi Hajj & Umrah Company<br>
+            </p>
+            <div class="map-container"> -->
+                <!-- <iframe
+                  src="https://www.google.com/maps?q=G-722/724, Pinjra Pool, Gulshah Road, Hyderabad, Sindh, Pakistan&output=embed"
+                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe> -->
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3468.269229883687!2d68.37578247512066!3d25.392361923768643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c715757fe9c6d%3A0x466b2555e5a305fd!2sABBASI%20HAJJ%20%26%20UMRAH%20COMPANY%20(PVT)%20LTD!5e1!3m2!1sen!2s!4v1749739298073!5m2!1sen!2s"
+                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- About Section -->
+    <div id="about" class="section-title">About Software Solution House</div>
+    <section style="max-width: 900px; margin: 0 auto 40px auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; font-size: 1.15em; line-height: 1.7; color: #333;">
+        <!-- Left: Company Description -->
+        <div style="flex: 1 1 400px; min-width: 280px; text-align: left;">
+          <b>Software Solution House</b> is a pioneer in enterprise software solutions, serving clients since 2005.<br>
+          Founded by <b>Muhammad Saqib Abbasi</b>, our team brings decades of combined expertise in accounting, automation, and business process optimization.<br>
+          We pride ourselves on delivering secure, scalable, and innovative software that adapts to your needs.<br>
+          <span style="color: var(--accent, #f6b93b); font-weight: 600;">Your growth is our mission.</span>
+        </div>
+      
+        <!-- Right: Contact Information -->
+        <div style="flex: 1 1 250px; min-width: 220px; text-align: left; color: #0a3d62; font-weight: 600;">
+          <h3 style="margin-bottom: 12px;">Contact Information</h3>
+          <p style="margin: 6px 0;">
+            📧 Email: <a href="mailto:info@softwaresolutionhouse.com" style="color: #007ea7; text-decoration: none;">info@softwaresolutionhouse.com</a>
+          </p>
+          <p style="margin: 6px 0;">
+            📞 Phone: +1 (555) 123-4567
+          </p>
+          <p style="margin: 6px 0;">
+            📍 Address: 123 Software St, Tech City, USA
+          </p>
+        </div>
+      </section>
+      
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/92304259585" class="whatsapp_float" target="_blank" title="Chat with us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:40px; height:40px;">
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2005-2025 Software Solution House. All rights reserved.<br>
+        Powered by Muhammad Saqib Abbasi | Your Trusted IT Partner
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   
+    <script>
+        
+      
+        emailjs.init('YOUR_USER_ID');
+      
+        window.submitForm = function(e) {
+          e.preventDefault();
+          const status = document.getElementById('form-status');
+          status.style.color = 'black';
+          status.innerHTML = "Sending...";
+      
+          const form = e.target;
+          const htmlContent = `
+            <h2>New Contact Request</h2>
+            <p><strong>Name:</strong> ${form.user_name.value}</p>
+            <p><strong>Email:</strong> ${form.user_email.value}</p>
+            <p><strong>Message:</strong><br>${form.message.value.replace(/\n/g, '<br>')}</p>
+          `;
+      
+          emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+            html_message: htmlContent,
+            user_name: form.user_name.value,
+            user_email: form.user_email.value
+          })
+          .then(() => {
+            status.style.color = 'green';
+            status.innerHTML = "Thank you for contacting us! We'll get back to you soon.";
+            form.reset();
+          })
+          .catch((error) => {
+            status.style.color = 'red';
+            status.innerHTML = "Oops! Something went wrong. Please try again later.";
+            console.error('EmailJS error:', error);
+          });
+        }
+      </script>
+      
+   <script type="module">
+  
+  
+    emailjs.init('YOUR_USER_ID');
+  
+    window.submitForm = function(e) {
+      e.preventDefault();
+      const status = document.getElementById('form-status');
+      status.style.color = 'black';
+      status.innerHTML = "Sending...";
+  
+      const form = e.target;
+      const htmlContent = `
+        <h2>New Contact Request</h2>
+        <p><strong>Name:</strong> ${form.user_name.value}</p>
+        <p><strong>Email:</strong> ${form.user_email.value}</p>
+        <p><strong>Message:</strong><br>${form.message.value.replace(/\n/g, '<br>')}</p>
+      `;
+  
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        html_message: htmlContent,
+        user_name: form.user_name.value,
+        user_email: form.user_email.value
+      })
+      .then(() => {
+        status.style.color = 'green';
+        status.innerHTML = "Thank you for contacting us! We'll get back to you soon.";
+        form.reset();
+      })
+      .catch((error) => {
+        status.style.color = 'red';
+        status.innerHTML = "Oops! Something went wrong. Please try again later.";
+        console.error('EmailJS error:', error);
+      });
+    }
+  </script>
+  
+  <script>
+   function updateCarousel() {
+  const carousel = document.querySelector('.logo-carousel');
+  const track = carousel.querySelector('.logo-track');
+
+  // Calculate total width of all logos + gaps
+  let totalWidth = 0;
+  const logos = track.querySelectorAll('.logo-item');
+  logos.forEach(logo => {
+    const style = window.getComputedStyle(logo);
+    const width = logo.offsetWidth;
+    const marginRight = parseFloat(style.marginRight) || 0;
+    totalWidth += width + marginRight;
+  });
+
+  // Get visible container width
+  const containerWidth = carousel.offsetWidth;
+
+  if (totalWidth > containerWidth) {
+    // Enable sliding
+    if (!track.classList.contains('slide')) {
+      // Duplicate logos for seamless scroll
+      track.innerHTML += track.innerHTML;
+      track.classList.add('slide');
+      track.classList.remove('center-align');
+      track.style.transform = '';
+    }
+  } else {
+    // Disable sliding and center-align logos
+    if (track.classList.contains('slide')) {
+      // Remove duplicates by keeping only first half
+      const logosArray = Array.from(track.children);
+      const half = logosArray.length / 2;
+      track.innerHTML = logosArray.slice(0, half).map(el => el.outerHTML).join('');
+      track.classList.remove('slide');
+    }
+    // Add center alignment
+    track.classList.add('center-align');
+    track.style.transform = 'translateX(0)';
+  }
+}
+
+
+// Run on page load and on window resize
+window.addEventListener('load', updateCarousel);
+window.addEventListener('resize', updateCarousel);
+</script>
+</body>
+</html>
