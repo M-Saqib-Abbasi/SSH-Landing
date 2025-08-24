@@ -3,574 +3,562 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Solution House</title>
-    <link rel="icon" href="./SSH ICO.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /*Carosol Start*/
-         @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+    <title>Software Solution House | Premium Digital Solutions</title>
+    <link rel="icon" href="../Images/Software Solution House Logo Icon.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
 
-  /* Class to enable sliding animation */
-  .slide {
-    animation: scroll-left 20s linear infinite;
-  }
-
-  /* Pause animation on hover */
-  .logo-carousel:hover .slide {
-    animation-play-state: paused;
-  }
-  .center-align {
-  justify-content: center !important;
-}
-.logo-track {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-        /*Carosol End */
-        :root {
-            --primary: #0a3d62;
-            --accent: #38ada9;
-            --secondary: #f6b93b;
-            --bg: #f4f7fa;
-            --white: #fff;
-            --shadow: 0 2px 12px rgba(10,61,98,0.08);
-        }
-        body {
-            margin: 0; padding: 0;
-            font-family: 'Roboto', Arial, sans-serif;
-            background: var(--bg);
-            color: var(--primary);
-        }
-        /* Header */
-        /* nav {
-            background: var(--primary);
-            color: var(--white);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 7vw;
-            box-shadow: var(--shadow);
-        } */
-        nav {
-    background: linear-gradient(90deg, #9d9fb3 0%, #007ea7 100%);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 7vw;
-    box-shadow: 0 2px 12px rgba(10,61,98,0.08);
-}
-
-        nav .logo {
-            font-size: 2em;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 32px;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            font-size: 1.1em;
-        }
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        nav ul li a:hover {
-            color: var(--secondary);
-        }
-        /* Hero */
-        .hero {
-            background: linear-gradient(120deg, #0a3d62 60%, #38ada9 100%);
-            color: var(--white);
-            padding: 80px 0 60px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 1.35em;
-            margin-bottom: 32px;
-            color: #e4eaf1;
-        }
-        .hero .cta-btn {
-            background: var(--secondary);
-            color: var(--primary);
-            padding: 16px 40px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.1em;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: background 0.2s;
-        }
-        .hero .cta-btn:hover {
-            background: #f9ca24;
-        }
-        /* Section Titles */
-        .section-title {
-            text-align: center;
-            font-size: 2.2em;
-            font-weight: 700;
-            margin: 60px 0 24px 0;
-            color: var(--primary);
-        }
-        /* Products */
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 28px;
-            margin-bottom: 40px;
-        }
-        .product {
-            background: var(--white);
-            border-radius: 14px;
-            box-shadow: var(--shadow);
-            padding: 24px 18px;
-            flex: 1 1 270px;
-            max-width: 320px;
-            min-width: 260px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-align: center;
-        }
-        .product:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 8px 32px rgba(10,61,98,0.15);
-        }
-        .product img {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            margin-bottom: 18px;
-            object-fit: cover;
-            box-shadow: 0 2px 10px rgba(56,173,169,0.11);
-        }
-        .product h3 {
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-        /* Contact Section */
-        .contact-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-            justify-content: center;
-            align-items: flex-start;
-            background: var(--white);
-            box-shadow: var(--shadow);
-            border-radius: 16px;
-            padding: 40px 16px;
-            margin: 40px 0;
-        }
-        .contact-form {
-            flex: 1 1 320px;
-            max-width: 420px;
-        }
-        .contact-form label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px 12px;
-            margin-bottom: 18px;
-            border-radius: 6px;
-            border: 1px solid #cfd8dc;
-            font-size: 1em;
-            background: #f8fafc;
-        }
-        .contact-form textarea {
-            resize: vertical;
-            height: 90px;
-        }
-        .contact-form button {
-            background: var(--accent);
-            color: var(--white);
-            border: none;
-            padding: 12px 32px;
-            border-radius: 24px;
-            font-size: 1.1em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .contact-form button:hover {
-            background: #079992;
-        }
-        .address-info {
-            flex: 1 1 320px;
-            max-width: 420px;
-            font-size: 1.1em;
-            color: var(--primary);
-        }
-        .address-info h4 {
-            margin-top: 0;
-            color: var(--accent);
-            font-weight: 700;
-        }
-        .map-container {
-            width: 100%;
-            height: 220px;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-top: 16px;
-            box-shadow: 0 2px 8px rgba(56,173,169,0.09);
-        }
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            text-align: center;
-            padding: 28px 0 16px 0;
-            font-size: 1.1em;
-            margin-top: 40px;
-        }
-        /* WhatsApp Floating Button */
-        .whatsapp_float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 36px;
-            right: 36px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 36px;
-            box-shadow: 2px 2px 8px #999;
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: background 0.2s;
-        }
-        .whatsapp_float:hover {
-            background-color: #128c7e;
-        }
-        @media (max-width: 900px) {
-            .contact-section {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .products {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                padding: 14px 3vw;
-            }
-            .hero h1 { font-size: 2em; }
-            .section-title { font-size: 1.4em; }
-            .contact-section { padding: 20px 4vw; }
-        }
-    </style>
+    <link href="./files/aos.css" rel="stylesheet">
+    
+       <link rel="stylesheet" href="./files/style.css">
+    
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo" style="display:flex;align-items:center;gap:12px;">
-            <img src="./SSH Logo.png" alt="Company Logo" style="width:44px;height:44px;object-fit:contain;">
-            Software Solution House
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="./Images/Software Solution House Icon.png" alt="Software Solution House Logo">
+                <span>Software<span class="text-gradient">Solution</span>House</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            
+            <a href="#contact" class="cta-button">Get Started</a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <ul>
-            <li><a href="#products">CoreSuit</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About Us</a></li>
-        </ul>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Empowering Businesses Since 2005</h1>
-        <p>
-            Welcome to <b>Software Solution House</b>, your trusted partner in digital transformation.<br>
-            We craft robust, scalable, and innovative solutions for modern enterprises.<br>
-            <i>Discover our flagship suite: <span style="color:var(--secondary);font-weight:700;">CoreSuit</span></i>
-        </p>
-        <a href="#contact"><button class="cta-btn">Get in Touch</button></a>
-    </section>
-
-    <!-- Products Section -->
-    <div id="products">
-        <div class="section-title">Our CoreSuit Modules</div>
-        <div class="products">
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=200&q=80" alt="General Ledger">
-                <h3>General Ledger</h3>
-                <p>Robust financial management with real-time insights and comprehensive reporting.</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=200&q=80" alt="Travel Management">
-                <h3>Travel Management</h3>
-                <p>Seamlessly plan, book, and track business travel and expenses.</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=200&q=80" alt="Ticket Management">
-                <h3>Ticket Management</h3>
-                <p>Efficiently manage support tickets and elevate your customer service.</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?auto=format&fit=crop&w=200&q=80" alt="Inventory Management">
-                <h3>Inventory Management</h3>
-                <p>Automate inventory tracking and optimize your supply chain.</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=200&q=80" alt="POS">
-                <h3>POS</h3>
-                <p>Fast, secure, and reliable Point of Sale for modern retail.</p>
-            </div>
-            <div class="product">
-                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=200&q=80" alt="On Demand Modules">
-                <h3>On Demand Modules</h3>
-                <p>Custom modules tailored to your unique business needs.</p>
-            </div>
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <video autoplay muted loop>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-futuristic-circuit-12985-large.mp4" type="video/mp4">
+            </video>
         </div>
-    </div>
-    <section id="customers" style="max-width: 900px; margin: 60px auto; padding: 0 20px; text-align: center;">
-        <h2 style="font-size: 2.2em; color: #0a3d62; margin-bottom: 24px; font-weight: 700;">Our Valued Customers</h2>
-        <p style="font-size: 1.1em; color: #555; margin-bottom: 30px;">
-          These companies trust Software Solution House and use our CoreSuit suite to power their business operations.
-        </p>
-      
-        <div class="logo-carousel" style="overflow: hidden; position: relative; width: 100%; max-width: 800px; margin: 0 auto;">
-      
-          <div class="logo-track" style="
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            will-change: transform;
-          ">
-            <!-- Logos -->
-            <div class="logo-item" style="flex: 0 0 auto; width: 120px;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="width: 100%; height: auto; object-fit: contain;">
-            </div>
-            <div class="logo-item" style="flex: 0 0 auto; width: 120px;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="width: 100%; height: auto; object-fit: contain;">
-            </div>
-            <div class="logo-item" style="flex: 0 0 auto; width: 120px;">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" style="width: 100%; height: auto; object-fit: contain;">
+        
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Empowering Businesses Since <span class="text-gradient">2019</span></h1>
+                <p>Welcome to Software Solution House, your trusted partner in digital transformation. We craft robust, scalable, and innovative solutions for modern enterprises.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#services" class="cta-button">Explore CoreSuit</a>
+                    <a href="#contact" class="secondary-button">Contact Us</a>
+                </div>
             </div>
             
-
-            <!-- Add more logos as needed -->
-          </div>
-        </div>
-      </section>
-      
-    <!-- Contact Section -->
-    <div id="contact" class="section-title">Contact Us</div>
-    <section class="contact-section">
-        <!-- Contact Form -->
-        <form class="contact-form" autocomplete="off" onsubmit="return submitForm(event)">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" name="user_name" required>
-            <label for="email">Your Email *</label>
-            <input type="email" id="email" name="user_email" required>
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-            <div id="form-status" style="margin-top:10px;font-weight:600;"></div>
-        </form>
-        <!-- Address and Map -->
-        <!-- <div class="address-info">
-            <h4>Our Office</h4>
-            <p>
-                Suit: G-722/724, 2nd Floor, Abbasi Hajj & Umrah Company<br>
-            </p>
-            <div class="map-container"> -->
-                <!-- <iframe
-                  src="https://www.google.com/maps?q=G-722/724, Pinjra Pool, Gulshah Road, Hyderabad, Sindh, Pakistan&output=embed"
-                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe> -->
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3468.269229883687!2d68.37578247512066!3d25.392361923768643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c715757fe9c6d%3A0x466b2555e5a305fd!2sABBASI%20HAJJ%20%26%20UMRAH%20COMPANY%20(PVT)%20LTD!5e1!3m2!1sen!2s!4v1749739298073!5m2!1sen!2s"
-                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="./Images/Dashboard Image.png" alt="Software Solution House">
             </div>
-        </div> -->
+        </div>
     </section>
 
-    <!-- About Section -->
-    <div id="about" class="section-title">About Software Solution House</div>
-    <section style="max-width: 900px; margin: 0 auto 40px auto; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; font-size: 1.15em; line-height: 1.7; color: #333;">
-        <!-- Left: Company Description -->
-        <div style="flex: 1 1 400px; min-width: 280px; text-align: left;">
-          <b>Software Solution House</b> is a pioneer in enterprise software solutions, serving clients since 2005.<br>
-          Founded by <b>Muhammad Saqib Abbasi</b>, our team brings decades of combined expertise in accounting, automation, and business process optimization.<br>
-          We pride ourselves on delivering secure, scalable, and innovative software that adapts to your needs.<br>
-          <span style="color: var(--accent, #f6b93b); font-weight: 600;">Your growth is our mission.</span>
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="clients-container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Trusted By Leading Brands</h2>
+                <p>These companies trust Software Solution House and use our CoreSuit suite to power their business operations.</p>
+            </div>
+            
+            <div class="client-logos">
+                <a href="https://abbasihajjumrah.com/" target="_blank">
+                <img src="./Images/AHUC.png" alt="Abbasi Group Of Companies">
+                </a>
+                <a href="https://abbasihajjumrah.com/" target="_blank">
+                <img src="./Images/Abbasi.png" alt="Abbasi Hajj & Umrah Company">
+                </a>
+                <a href="https://abbasiconsultants.com/" target="_blank">
+                <img src="./Images/Abbasi Consultant.png" alt="Abbasi Consultants">
+                </a>
+                <a href="https://dreamworldint.com/" target="_blank">
+                <img src="./Images/dreamworld.png" alt="Dream World Internation">
+                </a>
+                <a href="https://www.facebook.com/RehmaniHajjServices" target="_blank">
+                <img src="./Images/Rehmani.png" alt="Rehmani Hajj Services">
+                </a>
+            </div>
         </div>
-      
-        <!-- Right: Contact Information -->
-        <div style="flex: 1 1 250px; min-width: 220px; text-align: left; color: #0a3d62; font-weight: 600;">
-          <h3 style="margin-bottom: 12px;">Contact Information</h3>
-          <p style="margin: 6px 0;">
-            📧 Email: <a href="mailto:info@softwaresolutionhouse.com" style="color: #007ea7; text-decoration: none;">info@softwaresolutionhouse.com</a>
-          </p>
-          <p style="margin: 6px 0;">
-            📞 Phone: +1 (555) 123-4567
-          </p>
-          <p style="margin: 6px 0;">
-            📍 Address: 123 Software St, Tech City, USA
-          </p>
-        </div>
-      </section>
-      
+    </section>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/92304259585" class="whatsapp_float" target="_blank" title="Chat with us on WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:40px; height:40px;">
-    </a>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our <span class="text-gradient">CoreSuit</span> Modules</h2>
+                <p>Comprehensive business solutions designed to streamline your operations and drive growth.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>General Ledger</h3>
+                    <p>Robust financial management with real-time insights and comprehensive reporting.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Travel Management</h3>
+                    <p>Seamlessly plan, book, and track business travel and expenses.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Ticket Management</h3>
+                    <p>Efficiently manage support tickets and elevate your customer service.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3>Inventory Management</h3>
+                    <p>Automate inventory tracking and optimize your supply chain.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <h3>POS System</h3>
+                    <p>Fast, secure, and reliable Point of Sale for modern retail.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Custom Modules</h3>
+                    <p>Tailored solutions designed for your unique business needs.</p>
+                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>By The Numbers</h2>
+                <p>05 years of delivering excellence in business software solutions.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number counter" data-target="05">0</div>
+                    <div class="stat-text">Years Experience</div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number counter" data-target="55">0</div>
+                    <div class="stat-text">Clients Served</div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number counter" data-target="98">0</div>
+                    <div class="stat-text">Client Satisfaction</div>
+                </div>
+                
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number counter" data-target="06">0</div>
+                    <div class="stat-text">Modules Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our <span class="text-gradient">Portfolio</span></h2>
+                <p>Explore our implementations and see how we've transformed businesses operations.</p>
+            </div>
+            
+            <div class="portfolio-filter" data-aos="fade-up">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="finance">Finance</button>
+                <button class="filter-button" data-filter="retail">Retail</button>
+                <button class="filter-button" data-filter="manufacturing">Manufacturing</button>
+                <button class="filter-button" data-filter="services">Services</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="finance" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./Images/Banking Solution.png" alt="Banking Solution" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Banking Financial Suite</h3>
+                        <p>Comprehensive financial management for regional banks</p>
+                    </div>
+                    <a href="#" class="portfolio-link" data-lightbox="finance-1"></a>
+                </div>
+                
+                <div class="portfolio-item" data-category="retail" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./Images/Retail.png" alt="Retail POS" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Retail POS System</h3>
+                        <p>Custom point-of-sale for national retail chain</p>
+                    </div>
+                    <a href="#" class="portfolio-link" data-lightbox="retail-1"></a>
+                </div>
+                
+                <div class="portfolio-item" data-category="manufacturing" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./Images/Inventory.png" alt="Inventory System" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Manufacturing Inventory</h3>
+                        <p>Enterprise inventory management solution</p>
+                    </div>
+                    <a href="#" class="portfolio-link" data-lightbox="manufacturing-1"></a>
+                </div>
+                
+                <div class="portfolio-item" data-category="services" data-aos="fade-up" data-aos-delay="400">
+                    <img src="./Images/Travel.png" alt="Travel Management" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Travel Management</h3>
+                        <p>Corporate travel booking and expense system</p>
+                    </div>
+                    <a href="#" class="portfolio-link" data-lightbox="services-1"></a>
+                </div>
+                
+                <div class="portfolio-item" data-category="finance" data-aos="fade-up" data-aos-delay="500">
+                    <img src="./Images/Accounting.png" alt="Accounting System" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Enterprise Accounting</h3>
+                        <p>Full-featured accounting suite for large organizations</p>
+                    </div>
+                    <a href="#" class="portfolio-link" data-lightbox="finance-2"></a>
+                </div>
+                
+                <div class="portfolio-item" data-category="retail" data-aos="fade-up" data-aos-delay="600">
+                    <img src="./Images/Ecommrece.png" alt="E-commerce Integration" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>E-commerce Integration</h3>
+                        <p>Seamless connection between POS and online store</p>
+                    </div>
+                    <a href="#" class="portfolio-link" data-lightbox="retail-2"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>What Our <span class="text-gradient">Clients</span> Say</h2>
+                <p>Don't just take our word for it - hear from businesses we've transformed.</p>
+            </div>
+            
+            <div class="testimonial-slider" data-aos="fade-up">
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        Software Solution House completely revolutionized our financial operations. Their General Ledger module provided real-time insights we never had before, helping us reduce costs by 18% in the first year. Their team's expertise in accounting systems is unmatched.
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmed Khan" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Ahmed Khan</h4>
+                            <p>CFO, National Textiles</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        The travel management system developed by Software Solution House has saved us countless hours and reduced our travel expenses by 22%. The seamless integration with our accounting system was exactly what we needed. Highly recommended for any business with frequent travel.
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Fatima Ahmed" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Fatima Ahmed</h4>
+                            <p>Operations Director, Global Consultants</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        As a retail chain with 35 locations, we needed a robust POS system that could handle our complex inventory needs. Software Solution House delivered beyond our expectations. The system is fast, reliable, and their support team is always available when we need them.
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Bilal Mahmood" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Bilal Mahmood</h4>
+                            <p>CEO, Urban Retail Group</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FAQ Section -->
+    <section class="faq" id="about">
+        <div class="faq-container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+                <p>Find answers to common questions about our CoreSuit and services.</p>
+            </div>
+            
+            <div class="accordion" data-aos="fade-up">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What is CoreSuit?</h3>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>CoreSuit is our flagship enterprise software suite that includes modules for financial management, inventory, POS, travel management, and more. It's a comprehensive solution designed to streamline all aspects of your business operations.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Can I use only specific modules?</h3>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Absolutely! CoreSuit is modular by design. You can start with just the modules you need (like General Ledger or POS) and add others as your business grows. All modules integrate seamlessly with each other.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>How does implementation work?</h3>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Our implementation process includes discovery, configuration, data migration, training, and go-live support. We assign a dedicated project manager to ensure smooth deployment tailored to your business needs.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Do you offer custom development?</h3>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, we specialize in custom modules and extensions to meet unique business requirements. Our "On Demand Modules" service lets you get exactly the functionality you need.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What ongoing support do you provide?</h3>
+                        <div class="accordion-icon">+</div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We offer 24/7 technical support, regular software updates, security patches, and performance optimization. Our support packages are flexible to match your business requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-container" data-aos="fade-up">
+            <h2>Ready to Transform Your Business Operations?</h2>
+            <p>Discover how CoreSuit can streamline your processes and drive growth. Our team is ready to help you get started.</p>
+            <a href="#contact" class="cta-button">Request a Demo</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right">
+                <div class="section-title">
+                    <h2>Get In <span class="text-gradient">Touch</span></h2>
+                    <p>We'd love to discuss how CoreSuit can benefit your business.</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Our Office</h3>
+                        <p>Suit: G-722/724, 2nd Floor, Abbasi Hajj & Umrah Company, Pinjra Pool, Gulshah Road, Hyderabad, Sindh, Pakistan</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email Us</h3>
+                        <a href="mailto:softwaresolutionhouse@outlook.com">softwaresolutionhouse@outlook.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Call Us</h3>
+                        <a href="tel:+92304259585">+92 304 259585</a>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3468.269229883687!2d68.37578247512066!3d25.392361923768643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c715757fe9c6d%3A0x466b2555e5a305fd!2sABBASI%20HAJJ%20%26%20UMRAH%20COMPANY%20(PVT)%20LTD!5e1!3m2!1sen!2s!4v1749739298073!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <div class="contact-form" data-aos="fade-left">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        &copy; 2005-2025 Software Solution House. All rights reserved.<br>
-        Powered by Muhammad Saqib Abbasi | Your Trusted IT Partner
+        <div class="footer-container">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">
+                    <img src="./Images/Software Solution House Logo.jpg" alt="Software Solution House Logo">
+                    <span>S<span class="text-gradient">S</span>H</span>
+                </a>
+                <p>Empowering businesses with innovative software solutions since 2019. We specialize in enterprise systems that drive efficiency and growth.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">CoreSuit Modules</a></li>
+                    <li><a href="#portfolio">Case Studies</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>CoreSuit Modules</h3>
+                <ul>
+                    <li><a href="#services">General Ledger</a></li>
+                    <li><a href="#services">Travel Management</a></li>
+                    <li><a href="#services">Ticket Management</a></li>
+                    <li><a href="#services">Inventory Management</a></li>
+                    <li><a href="#services">POS System</a></li>
+                    <li><a href="#services">Custom Modules</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe for updates on new features, case studies, and business insights.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p>We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2019-<script>document.write(new Date().getFullYear())</script> Software Solution House. All Rights Reserved. | <a href="#home">Privacy Policy</a> | <a href="#home">Terms of Service</a></p>
+            <p>Powered by Muhammad Saqib Abbasi | Your Trusted IT Partner</p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-   
-    <script>
-        
-      
-        emailjs.init('YOUR_USER_ID');
-      
-        window.submitForm = function(e) {
-          e.preventDefault();
-          const status = document.getElementById('form-status');
-          status.style.color = 'black';
-          status.innerHTML = "Sending...";
-      
-          const form = e.target;
-          const htmlContent = `
-            <h2>New Contact Request</h2>
-            <p><strong>Name:</strong> ${form.user_name.value}</p>
-            <p><strong>Email:</strong> ${form.user_email.value}</p>
-            <p><strong>Message:</strong><br>${form.message.value.replace(/\n/g, '<br>')}</p>
-          `;
-      
-          emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-            html_message: htmlContent,
-            user_name: form.user_name.value,
-            user_email: form.user_email.value
-          })
-          .then(() => {
-            status.style.color = 'green';
-            status.innerHTML = "Thank you for contacting us! We'll get back to you soon.";
-            form.reset();
-          })
-          .catch((error) => {
-            status.style.color = 'red';
-            status.innerHTML = "Oops! Something went wrong. Please try again later.";
-            console.error('EmailJS error:', error);
-          });
-        }
-      </script>
-      
-   <script type="module">
-  
-  
-    emailjs.init('YOUR_USER_ID');
-  
-    window.submitForm = function(e) {
-      e.preventDefault();
-      const status = document.getElementById('form-status');
-      status.style.color = 'black';
-      status.innerHTML = "Sending...";
-  
-      const form = e.target;
-      const htmlContent = `
-        <h2>New Contact Request</h2>
-        <p><strong>Name:</strong> ${form.user_name.value}</p>
-        <p><strong>Email:</strong> ${form.user_email.value}</p>
-        <p><strong>Message:</strong><br>${form.message.value.replace(/\n/g, '<br>')}</p>
-      `;
-  
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        html_message: htmlContent,
-        user_name: form.user_name.value,
-        user_email: form.user_email.value
-      })
-      .then(() => {
-        status.style.color = 'green';
-        status.innerHTML = "Thank you for contacting us! We'll get back to you soon.";
-        form.reset();
-      })
-      .catch((error) => {
-        status.style.color = 'red';
-        status.innerHTML = "Oops! Something went wrong. Please try again later.";
-        console.error('EmailJS error:', error);
-      });
-    }
-  </script>
-  
-  <script>
-   function updateCarousel() {
-  const carousel = document.querySelector('.logo-carousel');
-  const track = carousel.querySelector('.logo-track');
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-  // Calculate total width of all logos + gaps
-  let totalWidth = 0;
-  const logos = track.querySelectorAll('.logo-item');
-  logos.forEach(logo => {
-    const style = window.getComputedStyle(logo);
-    const width = logo.offsetWidth;
-    const marginRight = parseFloat(style.marginRight) || 0;
-    totalWidth += width + marginRight;
-  });
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/92304259585" class="whatsapp_float" target="_blank" title="Chat with us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 
-  // Get visible container width
-  const containerWidth = carousel.offsetWidth;
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="" class="lightbox-image" id="lightboxImage">
+            <div class="lightbox-nav">
+                <div class="lightbox-prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="lightbox-next"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </div>
 
-  if (totalWidth > containerWidth) {
-    // Enable sliding
-    if (!track.classList.contains('slide')) {
-      // Duplicate logos for seamless scroll
-      track.innerHTML += track.innerHTML;
-      track.classList.add('slide');
-      track.classList.remove('center-align');
-      track.style.transform = '';
-    }
-  } else {
-    // Disable sliding and center-align logos
-    if (track.classList.contains('slide')) {
-      // Remove duplicates by keeping only first half
-      const logosArray = Array.from(track.children);
-      const half = logosArray.length / 2;
-      track.innerHTML = logosArray.slice(0, half).map(el => el.outerHTML).join('');
-      track.classList.remove('slide');
-    }
-    // Add center alignment
-    track.classList.add('center-align');
-    track.style.transform = 'translateX(0)';
-  }
-}
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
 
-
-// Run on page load and on window resize
-window.addEventListener('load', updateCarousel);
-window.addEventListener('resize', updateCarousel);
-</script>
+        <script src="./files/script.js">
+        // Initialize AOS animation
+      
+    </script>
 </body>
 </html>
