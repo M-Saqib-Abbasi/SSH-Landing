@@ -1,54 +1,73 @@
-// Initialize EmailJS
-// (function() {
-//     emailjs.init("9GxxFCrdiZZwEnmHh"); // 🔑 Replace with your EmailJS Public Key
-// })();
 
-// contact.js
 
-// Handle Contact Us Form
-document.getElementById("contactForm")?.addEventListener("submit", function (e) {
-    e.preventDefault();
+$(document).ready(function () {
+    $("#contactSubmitBtn").on("click", function (e) {
+        e.preventDefault();
 
-    const params = {
-        subject: "Contact Form",
-        company_logo: "https://abbasihajjumrah.com/img/abbasilogo-removebg-preview.png",
+        const params = {
+        subject: document.getElementById("subject").value,
+        company_logo: "https://logo.softwaresolutionhouse.com/Images/Software%20Solution%20House%20Logo%20png.png",
         company_name: "Software Solution House",
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         phone: document.getElementById("phone").value,
         message: document.getElementById("message").value,
-        to_email: "softwaresolutionhouse@outlook.com.com"
+        to_email: "softwaresolutionhouse@outlook.com",
+        from_emai:"softwaresolutionhouse.official@gmail.com"
     };
 
-    emailjs.send("service_spr4x3d", "template_hwcjqqh", params)
-        .then(function (response) {
-            alert("✅ Your message has been sent successfully!");
-            document.getElementById("contactForm").reset();
-        }, function (error) {
-            console.error("FAILED...", error);
-            alert("❌ Failed to send message. Please try again.");
-        });
-});
+        emailjs.send("service_spr4x3d", "template_hwcjqqh", params)
+            .then(function (response) {
+             showModal("✅ Your message has been sent!", "success");
+                $("#contactForm")[0].reset();
+            })
+            .catch(function (error) {
+               showModal("❌ Failed to send your message. Try again later.", "error");
+            });
+    });
 
-// Handle Newsletter Form
-document.querySelector(".newsletter-form")?.addEventListener("submit", function (e) {
+    // Newsletter Subscribe
+$("#newsletterSubmitBtn").on("click", function (e) {
     e.preventDefault();
 
     const params = {
-        subject: "Newsletter",
-        company_logo: "https://abbasihajjumrah.com/img/abbasilogo-removebg-preview.png",
-        company_name: "Softwrare Solution House",
-        subscriber_email: document.querySelector(".newsletter-input").value,
-        to_email: "softwaresolutionhouse@outlook.com",
-        email: "softwaresolutionhouse@outlook.com"
+        subject: "Newsletter Subscription",
+        company_logo: "https://logo.softwaresolutionhouse.com/Images/Software%20Solution%20House%20Logo%20png.png",
+        company_name: "Software Solution House",
+        to_email: "softwaresolutionhouse@outlook.com",  // ✅ Recipient (your email)
+        subscriber_email: document.getElementById("NewsLetterEmail").value // ✅ Subscriber email
     };
 
     emailjs.send("service_spr4x3d", "template_cp5n0a6", params)
         .then(function (response) {
-            alert("✅ Newsletter subscription successful!");
-            document.querySelector(".newsletter-form").reset();
-        }, function (error) {
-            console.error("FAILED...", error);
-            alert("❌ Failed to subscribe. Please try again.");
+            showModal("✅ Thank you for subscribing!", "success");
+            $("#newLetterForm")[0].reset();
+        })
+        .catch(function (error) {
+           showModal("❌ Subscription failed. Please try again.", "error");
         });
+});
+
+
+function showModal(message, type = "success") {
+    const modal = document.getElementById("messageModal");
+    const modalMessage = document.getElementById("modalMessage");
+
+    // Reset classes
+    modalMessage.className = "";
+    modalMessage.classList.add(type === "success" ? "modal-success" : "modal-error");
+
+    // Set message
+    modalMessage.textContent = message;
+
+    // Show modal
+    modal.style.display = "flex";
+
+    // Auto hide after 3 seconds
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 3000);
+}
+
+
 });

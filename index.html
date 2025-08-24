@@ -22,6 +22,13 @@
     
 </head>
 <body>
+    <!-- Modal -->
+<div id="messageModal" class="modal-overlay">
+  <div class="modal-content">
+    <p id="modalMessage"></p>
+  </div>
+</div>
+
     <!-- Header -->
     <header id="header">
         <div class="header-container">
@@ -46,6 +53,7 @@
         </div>
     </header>
 
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
@@ -53,7 +61,9 @@
                 <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-futuristic-circuit-12985-large.mp4" type="video/mp4">
             </video>
         </div>
-        
+        <!-- Global Toast Message -->
+
+
         <div class="hero-container">
             <div class="hero-content" data-aos="fade-right">
                 <h1>Empowering Businesses Since <span class="text-gradient">2019</span></h1>
@@ -464,7 +474,7 @@
                         <textarea id="message" class="form-control" required></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" id="contactSubmitBtn" class="submit-btn">Send Message</button>
                 </form>
             </div>
         </div>
@@ -513,11 +523,12 @@
             <div class="footer-newsletter">
                 <h3>Newsletter</h3>
                 <p>Subscribe for updates on new features, case studies, and business insights.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your Email" class="newsletter-input" required>
-                    <button type="submit" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
+                <form class="newsletter-form" id="newLetterForm">
+                    <input type="email" id="NewsLetterEmail" placeholder="Your Email" class="newsletter-input" required>
+                    <button type="submit" id="newsletterSubmitBtn" class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
                 </form>
                 <p>We respect your privacy. Unsubscribe at any time.</p>
+
             </div>
         </div>
         
@@ -526,6 +537,7 @@
             <p>Powered by Muhammad Saqib Abbasi | Your Trusted IT Partner</p>
         </div>
     </footer>
+
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">
