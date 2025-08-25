@@ -429,7 +429,8 @@ header.scrolled {
 }
 
 .service-link {
-    display: flex;
+    /* display: flex; */
+        display: none;
     align-items: center;
     gap: 0.5rem;
     color: var(--primary);

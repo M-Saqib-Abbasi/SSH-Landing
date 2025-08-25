@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         const params = {
         subject: document.getElementById("subject").value,
-        company_logo: "https://softwaresolutionhouse.com/Images/Software-Solution-House.jpg",
+        company_logo: "https://logo.softwaresolutionhouse.com/Images/Software-Solution-House.jpg",
         company_name: "Software Solution House",
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
@@ -32,7 +32,7 @@ $("#newsletterSubmitBtn").on("click", function (e) {
 
     const params = {
         subject: "Newsletter Subscription",
-        company_logo: "https://softwaresolutionhouse.com/Images/Software-Solution-House.jpg",
+        company_logo: "https://logo.softwaresolutionhouse.com/Images/Software-Solution-House.jpg",
         company_name: "Software Solution House",
         to_email: "softwaresolutionhouse@outlook.com",  // ✅ Recipient (your email)
         subscriber_email: document.getElementById("NewsLetterEmail").value // ✅ Subscriber email
