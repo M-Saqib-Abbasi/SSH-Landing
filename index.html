@@ -13,13 +13,26 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- AOS Animation -->
 
     <link href="./files/aos.css" rel="stylesheet">
     
        <link rel="stylesheet" href="./files/style.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Software Solution House offers custom software development, web and desktop applications, and our CoreSuit product featuring Accounting, Ledger, POS, and Travel Management solutions.">
+<meta name="keywords" content="Software Solutions, Custom Software Development, Web Applications, Desktop Applications, CoreSuit, Accounting Software, Ledger Management, POS System, Travel Management Software, Business Solutions">
+<meta property="og:title" content="Software Solution House | Custom Software Development & CoreSuit Solutions">
+<meta property="og:description" content="Explore our custom software solutions and CoreSuit product, including Accounting, Ledger, POS, and Travel Management.">
+<meta property="og:image" content="https://softwaresolutionhouse.com/Images/Software%20Solution%20House%20Icon.png">
+<meta property="og:url" content="https://softwaresolutionhouse.com/Images/Software%20Solution%20House%20Icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Software Solution House | Custom Software Development & CoreSuit Solutions">
+<meta name="twitter:description" content="Explore our custom software solutions and CoreSuit product, including Accounting, Ledger, POS, and Travel Management.">
+<meta name="twitter:image" content="https://softwaresolutionhouse.com/Images/Software%20Solution%20House%20Icon.png">
+<meta name="robots" content="index, follow">
 </head>
 <body>
     <!-- Modal -->
@@ -34,7 +47,15 @@
         <div class="header-container">
             <a href="#" class="logo">
                 <img src="./Images/Software Solution House Icon.png" alt="Software Solution House Logo">
-                <span>Software<span class="text-gradient">Solution</span>House</span>
+                  <span class="logo-text d-none d-md-inline">
+        Software<span class="text-gradient">Solution</span>House
+    </span>
+    
+    <!-- Abbreviation: visible only on mobile -->
+    <span class="logo-text-mobile d-inline d-md-none fw-bold">
+        S<span class="text-gradient">S</span>H
+    </span>
+                 
             </a>
             
             <nav class="nav-links">
@@ -45,7 +66,7 @@
                 <a href="#contact">Contact</a>
             </nav>
             
-            <a href="#contact" class="cta-button">Get Started</a>
+            <a href="#contact" id="cta-button-contact" class="cta-button">Get Started</a>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -583,5 +604,24 @@
     </script>
  
 <script src="./files/contact.js"></script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Software Solution House",
+    "url": "https://softwaresolutionhouse.com",
+    "logo": "https://softwaresolutionhouse.com/Images/Software%20Solution%20House%20Icon.png",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92 304 259585",
+        "contactType": "Customer Service"
+    },
+    "sameAs": [
+        "https://www.facebook.com/softwaresolutionhouse",
+        "https://www.linkedin.com/company/softwaresolutionhouse",
+        "https://www.instagram.com/softwaresolutionhouse"
+    ]
+}
+</script>
 </body>
 </html>

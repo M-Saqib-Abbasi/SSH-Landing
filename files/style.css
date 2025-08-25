@@ -1,4 +1,27 @@
 
+/* Reset default spacing */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Make header align with body */
+header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* For safety: ensure content also fits */
+.container, .main-body {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto; /* center if needed */
+}
+
+
 :root {
     --primary: #0a3d62;
     --primary-dark: #072a47;
@@ -1194,6 +1217,9 @@ footer {
         width: 30px;
         height: 30px;
     }
+
+   
+    
 }
 
 @media (max-width: 480px) {
@@ -1276,4 +1302,10 @@ footer {
 @keyframes scaleIn {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 767px) {
+  #cta-button-contact {
+    display: none !important;
+  }
 }
