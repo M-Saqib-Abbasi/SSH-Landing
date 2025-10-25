@@ -198,18 +198,19 @@ $(document).ready(function () {
 
         const subscriberEmail = $("#NewsLetterEmail").val().trim();
 
-          const verifyResponse = await fetch(`https://api.zerobounce.net/v2/validate?api_key=bb215140dd8b45f0bad82b32b8c4fd81&email=${subscriberEmail}`);
-        const verifyData = await verifyResponse.json();
-        if (verifyData.status !== "valid") {
-            showError("NewsLetterEmail", "This email address seems invalid or not registered");
-            return;
-        }
-
+         
         if (subscriberEmail === "") {
             showError("NewsLetterEmail", "Email is required");
             return;
         } else if (!isValidEmail(subscriberEmail)) {
             showError("NewsLetterEmail", "Enter a valid email address");
+            return;
+        }
+
+         const verifyResponse = await fetch(`https://api.zerobounce.net/v2/validate?api_key=bb215140dd8b45f0bad82b32b8c4fd81&email=${subscriberEmail}`);
+        const verifyData = await verifyResponse.json();
+        if (verifyData.status !== "valid") {
+            showError("NewsLetterEmail", "This email address seems invalid or not registered");
             return;
         }
 
