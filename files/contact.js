@@ -157,14 +157,14 @@ $(document).ready(function () {
 
         // Optional: check if email is real using ZeroBounce or Hunter.io API
         // Example (pseudo - requires API key):
-        /*
-        const verifyResponse = await fetch(`https://api.zerobounce.net/v2/validate?api_key=YOUR_API_KEY&email=${email}`);
+        
+        const verifyResponse = await fetch(`https://api.zerobounce.net/v2/validate?api_key=bb215140dd8b45f0bad82b32b8c4fd81&email=${email}`);
         const verifyData = await verifyResponse.json();
         if (verifyData.status !== "valid") {
             showError("email", "This email address seems invalid or not registered");
             return;
         }
-        */
+        
 
         // Prepare params for EmailJS
         const params = {
@@ -190,13 +190,21 @@ $(document).ready(function () {
     });
 
     // ===== Newsletter Subscribe =====
-    $("#newsletterSubmitBtn").on("click", function (e) {
+    $("#newsletterSubmitBtn").on("click",async function (e) {
         e.preventDefault();
 
         $(".error-text").remove();
         $(".input-error").removeClass("input-error");
 
         const subscriberEmail = $("#NewsLetterEmail").val().trim();
+
+          const verifyResponse = await fetch(`https://api.zerobounce.net/v2/validate?api_key=bb215140dd8b45f0bad82b32b8c4fd81&email=${subscriberEmail}`);
+        const verifyData = await verifyResponse.json();
+        if (verifyData.status !== "valid") {
+            showError("NewsLetterEmail", "This email address seems invalid or not registered");
+            return;
+        }
+
         if (subscriberEmail === "") {
             showError("NewsLetterEmail", "Email is required");
             return;

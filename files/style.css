@@ -1320,3 +1320,13 @@ footer {
     font-size: 12px;
     margin-top: 4px;
 }
+/* Prevent user selection and dragging */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+img, a {
+  pointer-events: none;
+}
