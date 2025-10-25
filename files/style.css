@@ -1310,3 +1310,13 @@ footer {
     display: none !important;
   }
 }
+
+
+.input-error {
+    border-color: red !important;
+    outline: none;
+}
+.error-text {
+    font-size: 12px;
+    margin-top: 4px;
+}
