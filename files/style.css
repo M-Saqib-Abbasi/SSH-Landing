@@ -1320,13 +1320,25 @@ footer {
     font-size: 12px;
     margin-top: 4px;
 }
-/* Prevent user selection and dragging */
+/* Prevent user selection and dragging on text only */
 body {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
 }
-img, a {
-  pointer-events: none;
+
+/* Allow interaction with links, buttons, and form elements */
+a, button, input, textarea, select {
+  user-select: auto;
+  -webkit-user-select: auto;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+/* Prevent dragging on images but allow them to be clickable if wrapped in links */
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
 }
